@@ -1,0 +1,72 @@
+#header {
+    max-width: 136rem;
+    width: 100%;
+    padding: 4rem 0;
+
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #header__logo {
+        width: 24.4rem;
+    }
+        
+    #header__navbar {
+
+        #header__list {
+            display: flex;
+            list-style: none;
+
+            .header__options {
+
+                &::after {
+                    content: '';
+                    transition: all .4s;
+                    display: block;
+                    
+                    width: 1%;
+                    height: 0.4rem;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    background-color: #043150;
+                }
+
+                &:nth-child(-n+4) {
+                    margin-right: 3rem;
+                }
+
+                .header__links {
+                    @include text-setting(3.2rem, 3.2rem, #043150, 600);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    #header__menu {
+        display: none;
+    }
+}
+
+@media (max-width: 804px) {
+    #header {
+        width: 80%;
+
+        #header__navbar {
+            
+            #header__list {
+                display: none;
+            }
+
+            #header__menu {
+                width: 5.3em;
+                display: block;
+            }
+        }
+    }
+}

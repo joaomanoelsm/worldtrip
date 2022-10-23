@@ -1,0 +1,97 @@
+#benefits {
+    max-width: 136rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: 6em 0 12em 0;
+
+    .benefits__itens {
+        display: flex;
+
+        .benefits__img-container {
+            width: 9em;
+            height: 9em;
+            background-color: var(--title-color);
+            border-radius: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .benefits__img {
+                width: 5.8em;
+            }
+        }
+
+        .benefits__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            padding: 1.2em 0;
+            margin-left: 1.6em;
+
+            .benefits__title {
+                @include text-setting( 3em, 1em, var(--title-color), 600 );
+                margin: 0;
+            }
+
+            .benefits__text {
+                @include text-setting( 2em, 1em, var(--text-color), 500 );
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    #benefits {
+        font-size: 7.5px;
+    }
+}
+
+@media (max-width: 1099px) {
+    #benefits {
+        font-size: 5.625px;
+    }
+}
+
+@media (max-width: 804px) {
+    #benefits {
+        font-size: 6px;
+        width: 80%;
+        align-items: center;
+
+        .benefits__itens {
+            align-items: center;
+            flex-direction: column;
+            
+            .benefits__img-container {
+                
+                .benefits__img {
+                }
+            }
+
+            .benefits__info {
+                margin-left: 0;
+                align-items: center;
+
+                .benefits__title {
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #benefits {
+        font-size: 4px;
+    }
+}
+
+@media (max-width: 400px) {
+    #benefits {
+        font-size: 3px;
+    }
+}

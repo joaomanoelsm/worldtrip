@@ -1,0 +1,92 @@
+#home {
+    width: 192rem;
+    height: 89.9rem;
+    max-width: 192rem;
+
+    #home__info-container {
+        display: flex;
+        justify-content: end;
+        max-width: 136rem;
+        width: 100%;
+        margin: 24.4rem auto 0 auto;
+
+        #home__info {
+            text-align: start;
+
+            #home__title {
+                @include text-setting(6.4rem, 8rem, #043150, 600);
+                text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+                width: 81.9rem;
+                margin-bottom: 3.4rem;
+            }
+
+            #home__text {
+                @include text-setting(3.6rem, 5.4rem, var(--title-color), 500);
+                text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+                width: 74.4rem;
+                margin-bottom: 3.4rem;
+            }
+
+            #home__button {
+                @include text-setting(3.6rem, 5.4rem, var(--main-color), 600);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transition: all .4s;
+                cursor: pointer;
+                border: none;
+                padding: 1.6rem 8.2rem;
+
+                background: #FCFCFC;
+                box-shadow: 0.4px 0.4px 0.4px rgba(0, 0, 0, 0.25);
+                border-radius: 1rem;
+
+                &:hover {
+                    transform: scale(1.01);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 804px) {
+    #home {
+        width: 100%;
+        
+        #home__info-container {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #home {
+        width: 100%;
+        height: 160em;
+        
+        #home__info-container {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #home {
+        
+        #home__info-container {
+            
+            #home__info {
+                
+                #home__title {
+                    width: 100%;
+                }
+    
+                #home__text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

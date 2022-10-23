@@ -1,0 +1,182 @@
+#plans {
+    font-size: 10px;
+    max-width: 136rem;
+    width: 100%;
+    margin-bottom: 12em;
+    user-select: none;
+
+    #plans__texts {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8em;
+
+        #plans__title {
+            @include text-setting( 5.2em, 1.3em, var(--title-color), 600 );
+            width: 66em;
+        }
+    
+        #plans__text {
+            @include text-setting( 3em, 1.5em, var(--text-color), 500 );
+            width: 59em;
+        }
+    }
+
+    #plans__itens-container {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 2em;
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--main-color);
+            border-radius: 1em;
+        }
+    
+        &::-webkit-scrollbar {
+            height: 1.6em;
+            background-color: #252525;
+            border-radius: 0.2em;
+        }
+
+        .plans__itens {
+            font-size: 1em;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &:nth-child(-n+5) {
+                margin-right: 3.6em;
+            }
+
+            .plans__img-container {
+                width: 31.5em;
+                border-radius: 1em;
+                overflow: hidden;
+                
+                .plans__background--linear-1 {
+                    background: linear-gradient( to right, #1F1C2C, #928DAB );
+                } 
+
+                .plans__background--linear-2 {
+                    background: linear-gradient( to right, #085078 , #85D8CE )
+                }
+                
+                .plans__background--linear-3 {
+                    background: linear-gradient( to right, #2C3E50 , #2980B9 )
+                }
+
+                .plans__background--linear-4 {
+                    background: linear-gradient( to right, #403A3E , #BE5869 )
+                }
+
+                .plans__background--linear-5 {
+                    background: linear-gradient( to right, #182848 , #4B6CB7 )
+                }
+
+                .plans__background--linear-6 {
+                    background: linear-gradient(to right, #16222A , #3A6073)
+                }
+
+                .plans__background {
+                    width: 100%;
+                    height: 8em;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                    
+                    
+                    .plans__country {
+                        @include text-setting( 4em, 1em, var(--title-color), 600 );
+                    }
+                }
+
+                .plans__img {
+                    width: 100%
+                }
+            }
+
+            .plans__info {
+                font-size: 1em;
+                width: 31.5em;
+                margin: 1.6em 0 0 3.2em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .plans__texts {
+
+                    .plans__city {
+                        @include text-setting( 3.6em, 1em, var(--secondary-text-color), 500 );
+                        margin-bottom: 0.888em;
+                    }
+
+                    .plans__summary {
+                        @include text-setting( 2em, 1.5em, var(--text-color), 400 );
+                    }
+                }
+
+                .plans__button {
+                    font-size: 1em;
+                    max-width: 31.5em;
+                    width: 100%;
+                    padding: 1.9em 0;
+                    background: transparent;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border: none;
+                    border: 0.4em solid #0F92EA;
+                    border-radius: 1em;
+                    cursor: pointer;
+
+                    a {
+                        @include text-setting( 3.6em, 1em, var(--main-color), 500 );
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    #plans {
+        font-size: 7.5px;
+    }
+}
+
+@media (max-width: 1099px) {
+    #plans {
+        font-size: 5.625px;
+    }
+}
+
+@media (max-width: 804px) {
+    #plans {
+        font-size: 7px;
+        width: 80%;
+
+        #plans__texts {
+            flex-direction: column;
+
+            #plans__title {
+                width: auto;
+                margin-bottom: 0.8em;
+            }
+            
+            #plans__text {
+                width: 100%;
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #plans {
+        font-size: 4px;
+    }
+}
