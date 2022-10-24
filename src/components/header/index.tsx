@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import logo from '../../assets/svgs/Logo.svg'
 import menu from '../../assets/svgs/menu.svg'
 

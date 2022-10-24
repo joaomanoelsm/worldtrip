@@ -1,26 +1,22 @@
 import homeBackground from '../../assets/imgs/Background-Home.jpg'
 import homeBackground2 from '../../assets/imgs/Background-Home-2.jpg'
 import homeBackground3 from '../../assets/imgs/Background-Home-3.jpg'
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Home = () => { 
-  const backgroundRef = useRef<HTMLTableSectionElement>(null!)
-  const [ background, setBackground ] = useState(homeBackground)
-  
+  const [ backgroundt, setBackground ] = useState( homeBackground )
+
+  const filterUnitsOfMeasure = () => {
+    if ( window.innerWidth <= 804 ) setBackground(homeBackground3)
+    else if ( window.innerWidth <= 1439 ) setBackground(homeBackground2)
+    else if ( window.innerWidth > 1439 ) setBackground(homeBackground)
+  }
 
   useEffect( () => {
-    console.log('effect')
 
-    const filterUnitsOfMeasure = () => {
-      console.log('foi')
-      if ( window.innerWidth <= 804 ) setBackground(homeBackground3)
-      else if ( window.innerWidth <= 1439 ) setBackground(homeBackground2)
-      else if ( window.innerWidth > 1439 ) setBackground(homeBackground)
-    }
-
-    window.onload = () => filterUnitsOfMeasure()
-    window.onresize = () => filterUnitsOfMeasure()
-  })  
+    window.addEventListener('load', filterUnitsOfMeasure )
+    window.addEventListener('resize', filterUnitsOfMeasure )
+  }, [])  
 
   // useEffect(() => {
   //   window
@@ -29,7 +25,7 @@ const Home = () => {
   // }, []);
 
   return (
-    <section ref={ backgroundRef } id='home' style={{ background: `url(${ background })`}}>
+    <section id='home' style={{ background: `url(${ backgroundt })`}}>
       <div id='home__info-container'>
         <div id='home__info'>
           <h1 id='home__title'>Welcome to WorldTrip, your international travel website</h1>
