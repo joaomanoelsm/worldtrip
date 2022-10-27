@@ -4,13 +4,19 @@ import { useEffect } from 'react'
 import { doubts } from '../../constants'
 
 const Faq = () => { 
+    let permissionForTheEvent = true
 
     useEffect( () => {
-        const options = document.querySelectorAll('.faq__options') as NodeListOf<HTMLLIElement>
 
-        options?.forEach( elem  => {
-            elem.addEventListener('click', () => elem.classList.toggle("faq__options--animation"))
-        })
+        if ( permissionForTheEvent ) {
+            const options = document.querySelectorAll('.faq__options') as NodeListOf<HTMLLIElement>
+
+            options?.forEach( elem => {
+                elem.addEventListener('click', () => elem.classList.toggle("faq__options--animation"))
+            });
+            permissionForTheEvent = false
+        }
+        
     })
 
   return (

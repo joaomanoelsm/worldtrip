@@ -16,7 +16,7 @@
         
     #header__navbar {
 
-        #header__list {
+        .header__list {
             display: flex;
             list-style: none;
 
@@ -59,12 +59,16 @@
 
         #header__navbar {
             
-            #header__list {
+            .header__list {
                 display: none;
             }
 
             #header__menu {
                 width: 5.3em;
+                display: block;
+            }
+
+            .header__list--appearance {
                 display: block;
             }
         }

@@ -7,7 +7,7 @@ import Assessments from './components/assessments';
 import Faq from './components/faq';
 import Footer from './components/footer';
 
-export const App = () => {
+const App = () => {
 
   return (
     <>
@@ -24,3 +24,5 @@ export const App = () => {
     </>
   )
 }
+
+export default App

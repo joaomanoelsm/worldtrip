@@ -4,7 +4,7 @@ import stars from '../../assets/svgs/Stars.svg'
 import leftArrow from '../../assets/svgs/Icon-arrow-left.svg'
 import rightArrow from '../../assets/svgs/Icon-arrow-right.svg'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { users } from '../../constants'
 import Slide from '../slide'
 
@@ -13,16 +13,26 @@ const Assessments = () => {
     const nextRef = useRef<HTMLImageElement>(null!)
     const backRef = useRef<HTMLImageElement>(null!)
 
-    let percentage = '50%'
+    const [ slideResponsiveness , setSlideResponsiveness ] = useState('desktop')
 
     useEffect( () => {
-        window.onload = () => window.innerWidth <= 804 ? percentage = '100%' : percentage = '50%';
-        window.onresize = () => window.innerWidth <= 804 ? percentage = '100%' : percentage = '50%';
+        const switchResponsiveness = () => {
+            if ( window.innerWidth <= 804 ) setSlideResponsiveness('mobile')
+            else setSlideResponsiveness('desktop')
+            console.log('ta entrando')
+        }
+
+        window.addEventListener( 'load', switchResponsiveness )
+        window.addEventListener( 'resize', switchResponsiveness )
     }, [])
 
   return (
     <div id='assessments'>
-        <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ percentage } animationTime={ '1s' } />
+        {
+            slideResponsiveness === 'desktop' 
+            ? <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ '50%' } animationTime={ '.7s' } />
+            : <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ '100%' } animationTime={ '.7s' } />
+        }
         <div></div>
         <div id='assessments__options'>
             <h2 id='assessments__title'>Assessments</h2>
