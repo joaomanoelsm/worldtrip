@@ -128,9 +128,17 @@
                     align-items: center;
 
                     border: none;
-                    border: 0.4em solid #0F92EA;
+                    border: 0.4em solid var(--main-color);
                     border-radius: 1em;
                     cursor: pointer;
+                    
+                    &:hover {
+                        border: 0.4em solid var(--secondary-main-color);
+                    }
+    
+                    &:hover a {
+                        color: var(--secondary-main-color);
+                    }
 
                     a {
                         @include text-setting( 3.6em, 1em, var(--main-color), 500 );

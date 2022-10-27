@@ -1,7 +1,7 @@
 #home {
-    width: 192rem;
+    width: 100%;
     height: 89.9rem;
-    max-width: 192rem;
+    background-size: contain;
 
     #home__info-container {
         display: flex;
@@ -14,21 +14,18 @@
             text-align: start;
 
             #home__title {
-                @include text-setting(6.4rem, 8rem, #043150, 600);
-                text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
-                width: 81.9rem;
+                @include text-setting(6.4rem, 8rem, #004A5E, 600);
                 margin-bottom: 3.4rem;
             }
 
             #home__text {
                 @include text-setting(3.6rem, 5.4rem, var(--title-color), 500);
                 text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
-                width: 74.4rem;
                 margin-bottom: 3.4rem;
             }
 
             #home__button {
-                @include text-setting(3.6rem, 5.4rem, var(--main-color), 600);
+                @include text-setting(3.6rem, 5.4rem, #004A5E, 600);
 
                 display: flex;
                 justify-content: center;
@@ -63,8 +60,6 @@
 
 @media (max-width: 576px) {
     #home {
-        width: 100%;
-        height: 160em;
         
         #home__info-container {
             width: 80%;

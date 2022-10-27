@@ -33,7 +33,7 @@
 
                 &:hover::after {
                     width: 100%;
-                    background-color: #043150;
+                    background-color: var(--secondary-main-color);
                 }
 
                 &:nth-child(-n+4) {
@@ -41,8 +41,13 @@
                 }
 
                 .header__links {
-                    @include text-setting(3.2rem, 3.2rem, #043150, 600);
+                    transition: all .4s;
+                    @include text-setting(3.2rem, 3.2rem, #004A5E, 600);
                     text-decoration: none;
+
+                    &:hover {
+                        color: var(--secondary-main-color);
+                    }
                 }
             }
         }
