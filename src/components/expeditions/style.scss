@@ -119,31 +119,34 @@
     #expeditions {
         width: 80%;
         font-size: 8px;
-        flex-direction: column;
-        padding: 8rem;
 
-        #expeditions__img-container {
-            width: 100%;
-        
-            #expeditions__img {
+        #expeditions__contain {
+            flex-direction: column;
+            padding: 8rem;
+            
+            #expeditions__img-container {
                 width: 100%;
-                margin-bottom: 4em;
-            }
-        }
-
-        #expeditions__info {
-            width: 100%;
-
-            #expeditions__texts {
-                margin-bottom: 4em;
+            
+                #expeditions__img {
+                    width: 100%;
+                    margin-bottom: 4em;
+                }
             }
 
-            #expeditions__buttons-container {
+            #expeditions__info {
                 width: 100%;
 
-                .expeditions__buttons {
-                    &:nth-child(1) {
-                        margin-right: 4em;
+                #expeditions__texts {
+                    margin-bottom: 4em;
+                }
+
+                #expeditions__buttons-container {
+                    width: 100%;
+
+                    .expeditions__buttons {
+                        &:nth-child(1) {
+                            margin-right: 4em;
+                        }
                     }
                 }
             }
