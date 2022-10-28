@@ -83,19 +83,19 @@
     }
 }
 
-@media (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
     #footer {
         font-size: 7.5px;
     }
 }
 
-@media (max-width: 1099px) {
+@media screen and (max-width: 1099px) {
     #footer {
         font-size: 5.625px;
     }
 }
 
-@media (max-width: 804px) {
+@media screen and (max-width: 804px) {
     #footer {
         font-size: 5px;
 
@@ -105,13 +105,13 @@
     }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     #footer {
         font-size: 3px;
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     #footer {
         font-size: 5px;
         height: auto;

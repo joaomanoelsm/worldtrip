@@ -44,19 +44,19 @@
     }
 }
 
-@media (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
     #benefits {
         font-size: 7.5px;
     }
 }
 
-@media (max-width: 1099px) {
+@media screen and (max-width: 1099px) {
     #benefits {
         font-size: 5.625px;
     }
 }
 
-@media (max-width: 804px) {
+@media screen and (max-width: 804px) {
     #benefits {
         font-size: 6px;
         width: 80%;
@@ -84,13 +84,13 @@
     }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     #benefits {
         font-size: 4px;
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     #benefits {
         font-size: 3px;
     }

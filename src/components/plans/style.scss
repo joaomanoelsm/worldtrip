@@ -150,19 +150,19 @@
     }
 }
 
-@media (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
     #plans {
         font-size: 7.5px;
     }
 }
 
-@media (max-width: 1099px) {
+@media screen and (max-width: 1099px) {
     #plans {
         font-size: 5.625px;
     }
 }
 
-@media (max-width: 804px) {
+@media screen and (max-width: 804px) {
     #plans {
         font-size: 7px;
         width: 80%;
@@ -183,7 +183,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
     #plans {
         font-size: 4px;
     }
