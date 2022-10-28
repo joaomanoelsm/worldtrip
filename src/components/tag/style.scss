@@ -1,0 +1,9 @@
+#tag {
+    @include text-setting( 3rem, 3rem, var(--main-color), 600 );
+    background-color: #004A5E;
+    padding: 1.2rem 1.4rem;
+    border-radius: 0.2rem;
+    margin-bottom: 2rem;
+    flex-basis: 0;
+    border: none;
+}

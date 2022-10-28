@@ -1,10 +1,11 @@
 import { PlansCountryArray } from "../../constants"
+import Tag from "../tag"
 
 const Plans = () => {
 
   return (
     <section id='plans'>
-        <div id='plans__tag'></div>
+    <Tag name='Plans' />
         <div id='plans__texts'>
             <h2 id='plans__title'>Choose your travel plan now</h2>
             <p id='plans__text'>

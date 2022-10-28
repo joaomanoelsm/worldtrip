@@ -6,9 +6,9 @@ const Header = () => {
    const menuRef = useRef<HTMLImageElement>(null!)
 
    useEffect( () => {
-    const list = document.querySelector('.header__list') as HTMLUListElement
+        const list = document.querySelector('.header__list') as HTMLUListElement
 
-    menuRef.current.addEventListener('click', () => list.classList.toggle('header__list--appearance') )
+        menuRef.current.addEventListener('click', () => list.classList.toggle('header__list--appearance') )
    }, [])
     
   return (

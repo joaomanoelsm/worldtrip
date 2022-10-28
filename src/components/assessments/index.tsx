@@ -7,6 +7,7 @@ import rightArrow from '../../assets/svgs/Icon-arrow-right.svg'
 import { useEffect, useRef, useState } from 'react'
 import { users } from '../../constants'
 import Slide from '../slide'
+import Tag from '../tag'
 
 const Assessments = () => {
     const slideRef = useRef<HTMLDivElement>(null!)
@@ -33,7 +34,7 @@ const Assessments = () => {
             ? <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ '50%' } animationTime={ '.7s' } />
             : <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ '100%' } animationTime={ '.7s' } />
         }
-        <div></div>
+        <Tag name='Assessments' />
         <div id='assessments__options'>
             <h2 id='assessments__title'>Assessments</h2>
             <div id='assessments__controller'>
