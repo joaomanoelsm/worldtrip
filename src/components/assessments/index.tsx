@@ -30,7 +30,7 @@ const Assessments = () => {
 
   return (
     <div id='assessments'>
-        <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } percentage={ percentage } animationTime={ '.7s' } />
+        <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } percentage={ percentage } animationTime={ '.7s' } enableMobileResponsiveness={ true } />
         <Tag name='Assessments' />
         <div id='assessments__options'>
             <h2 id='assessments__title'>Assessments</h2>

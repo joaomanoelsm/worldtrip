@@ -4,10 +4,11 @@ interface SlideI {
     back: React.MutableRefObject<HTMLImageElement | HTMLButtonElement>,
     next: React.MutableRefObject<HTMLImageElement | HTMLButtonElement>,
     percentage: string,
-    animationTime: string
+    animationTime: string,
+    enableMobileResponsiveness?: boolean
 }
 
-const Slide = ({ elementRef, back, next, percentage, animationTime }: SlideI ) => {
+const Slide = ({ elementRef, back, next, percentage, animationTime, enableMobileResponsiveness }: SlideI ) => {
 
     let index: string
     let permissionToTriggerTheEvent = true
@@ -48,8 +49,10 @@ const Slide = ({ elementRef, back, next, percentage, animationTime }: SlideI ) =
     })
 
     useEffect( () => {
-        if ( window.matchMedia("(max-width: 800px)").matches ) percentage = '100%'
-        else percentage = '50%'
+        if ( enableMobileResponsiveness ) {
+            if ( window.matchMedia("(max-width: 800px)").matches ) percentage = '100%'
+            else percentage = '50%'
+        }
     }, [ window ])
 
   return null

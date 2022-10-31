@@ -5,21 +5,21 @@
     margin-bottom: 12em;
 
     #expeditions__title {
-        @include text-setting( 5.2em, 1.3em, var(--title-color), 600 );
+        @include text-setting(5.2em, 1.3em, var(--title-color), 600);
         margin-bottom: 1.1538em;
     }
 
-    #expeditions__contain {  
+    #expeditions__contain {
         display: flex;
         justify-content: space-evenly;
         padding: 4em 0;
         border-radius: 1em;
         width: 100%;
-        background: linear-gradient( to right, #152331, #000000 );
+        background: linear-gradient(to right, #152331, #000000);
 
         #expeditions__img-container {
-        overflow: hidden;
-        width: 58.3em;
+            overflow: hidden;
+            width: 58.3em;
 
             .expeditions__slide {
                 transition: all .4s ease-out;
@@ -42,7 +42,7 @@
 
             #expeditions__texts {
                 overflow: hidden;
-                
+
                 .expeditions__slide-container {
                     transition: all .4s ease-out;
                     display: flex;
@@ -54,14 +54,14 @@
                         flex-shrink: 0;
                         width: 100%;
                         height: 100%;
-                        
+
                         #expeditions__title {
-                            @include text-setting( 4em, 1em, var(--title-color), 500 );
+                            @include text-setting(4em, 1em, var(--title-color), 500);
                             margin-bottom: 1em;
                         }
-                
+
                         #expeditions__text {
-                            @include text-setting( 2.6em, 1.5, var(--secondary-text-color), 400 );
+                            @include text-setting(2.6em, 1.5, var(--secondary-text-color), 400);
                         }
                     }
                 }
@@ -70,13 +70,13 @@
             #expeditions__buttons-container {
                 display: flex;
                 justify-content: space-between;
-        
+
                 .expeditions__buttons {
                     cursor: pointer;
                     font-size: 1em;
                     background-color: transparent;
                     padding: 1.46em 0em;
-                    
+
                     border: 0.4em solid var(--main-color);
                     border-radius: 1em;
                     width: 100%;
@@ -94,7 +94,7 @@
                     }
 
                     a {
-                        @include text-setting( 4.8em, 1em, var(--main-color), 600 );
+                        @include text-setting(4.8em, 1em, var(--main-color), 600);
                         text-decoration: none;
                     }
                 }
@@ -123,10 +123,10 @@
         #expeditions__contain {
             flex-direction: column;
             padding: 8rem;
-            
+
             #expeditions__img-container {
                 width: 100%;
-            
+
                 #expeditions__img {
                     width: 100%;
                     margin-bottom: 4em;
