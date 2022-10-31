@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react'
-
 interface SlideI {
     elementRef: React.MutableRefObject<HTMLDivElement>,
     back: React.MutableRefObject<HTMLImageElement | HTMLButtonElement>,
     next: React.MutableRefObject<HTMLImageElement | HTMLButtonElement>,
-    autoPlay: boolean,
     percentage: string,
     animationTime: string
 }
 
-const Slide = ({ elementRef, back, next, autoPlay, percentage, animationTime }: SlideI ) => {
+const Slide = ({ elementRef, back, next, percentage, animationTime }: SlideI ) => {
 
     let index: string
     let permissionToTriggerTheEvent = true
@@ -28,8 +26,6 @@ const Slide = ({ elementRef, back, next, autoPlay, percentage, animationTime }: 
         elementRef.current.style.transform = `translateX(${ percentage })`;
     }
 
-    const slideForwardCycle = () => setInterval( () => advancedSlide(), 5000 )
-
     const resetSlide =  () => {
 
         if ( permissionToTriggerTheEvent ) {
@@ -47,11 +43,14 @@ const Slide = ({ elementRef, back, next, autoPlay, percentage, animationTime }: 
     }
 
     useEffect( () => {
-        if ( autoPlay ) slideForwardCycle() 
-        
         next.current.addEventListener( 'click', advancedSlide )
         back.current.addEventListener( 'click', rewindSlide )
     })
+
+    useEffect( () => {
+        if ( window.matchMedia("(max-width: 800px)").matches ) percentage = '100%'
+        else percentage = '50%'
+    }, [ window ])
 
   return null
 }

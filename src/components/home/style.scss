@@ -48,7 +48,7 @@
     }
 }
 
-@media screen and (max-width: 804px) {
+@media only screen and (max-width: 804px) {
     #home {
         width: 100%;
         
@@ -58,7 +58,7 @@
     }
 }
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
     #home {
         
         #home__info-container {
@@ -67,7 +67,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
     #home {
         
         #home__info-container {

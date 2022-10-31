@@ -1,5 +1,3 @@
-import expeditionsImg from '../../assets/imgs/Img-expeditions.jpg'
-import expeditionsBackground from '../../assets/imgs/Background-expeditions.jpg'
 import { useEffect, useRef, useState } from 'react'
 import { ExpeditionsCountryArray } from '../../constants'
 import Slide from '../slide'
@@ -20,8 +18,8 @@ const Expeditions = () => {
   return (
     <>
         <section id='expeditions'>
-            <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ false } percentage={ '100%' } animationTime={ '.4s' }  />
-            <Slide elementRef={ textSlideRef } back={ backRef } next={ nextRef } autoPlay={ false } percentage={ '100%' } animationTime={ '.4s' }  />
+            <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } percentage={ '100%' } animationTime={ '.4s' }  />
+            <Slide elementRef={ textSlideRef } back={ backRef } next={ nextRef } percentage={ '100%' } animationTime={ '.4s' }  />
             <Tag name='Expeditions' />
             <h2 id='expeditions__title'>Choose your destination now</h2>
             <div id='expeditions__contain'>

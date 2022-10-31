@@ -6,6 +6,7 @@ import rightArrow from '../../assets/svgs/Icon-arrow-right.svg'
 
 import { useEffect, useRef, useState } from 'react'
 import { users } from '../../constants'
+
 import Slide from '../slide'
 import Tag from '../tag'
 
@@ -14,12 +15,12 @@ const Assessments = () => {
     const nextRef = useRef<HTMLImageElement>(null!)
     const backRef = useRef<HTMLImageElement>(null!)
 
-    const [ slideResponsiveness , setSlideResponsiveness ] = useState('desktop')
+    const [ percentage , setPercentage ] = useState('50%')
 
     useEffect( () => {
         const switchResponsiveness = () => {
-            if ( window.innerWidth <= 804 ) setSlideResponsiveness('mobile')
-            else setSlideResponsiveness('desktop')
+            if ( window.document.body.clientWidth <= 804 ) console.log(window.document.body.clientWidth)
+            else setPercentage('50%')
             console.log('ta entrando')
         }
 
@@ -29,11 +30,7 @@ const Assessments = () => {
 
   return (
     <div id='assessments'>
-        {
-            slideResponsiveness === 'desktop' 
-            ? <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ '50%' } animationTime={ '.7s' } />
-            : <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } autoPlay={ true } percentage={ '100%' } animationTime={ '.7s' } />
-        }
+        <Slide elementRef={ slideRef } back={ backRef } next={ nextRef } percentage={ percentage } animationTime={ '.7s' } />
         <Tag name='Assessments' />
         <div id='assessments__options'>
             <h2 id='assessments__title'>Assessments</h2>

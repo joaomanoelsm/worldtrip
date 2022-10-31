@@ -20,6 +20,10 @@
             display: flex;
             list-style: none;
 
+            .header__close {
+                display: none;
+            }
+
             .header__options {
 
                 &::after {
@@ -42,7 +46,7 @@
 
                 .header__links {
                     transition: all .4s;
-                    @include text-setting(3.2rem, 3.2rem, #004A5E, 600);
+                    @include text-setting( 3.2rem, 3.2rem, #004A5E, 600 );
                     text-decoration: none;
 
                     &:hover {
@@ -58,7 +62,7 @@
     }
 }
 
-@media screen and (max-width: 804px) {
+@media only screen and (max-width: 804px) {
     #header {
         width: 80%;
 
@@ -66,6 +70,16 @@
             
             .header__list {
                 display: none;
+
+                .header__options {
+                    flex-shrink: 0;
+                    flex-basis: 0;
+                    padding: 6rem 0;
+
+                    .header__links {
+                        @include text-setting( 8.2rem, 8.2rem, #004A5E, 600 );
+                    }
+                }
             }
 
             #header__menu {
@@ -74,7 +88,22 @@
             }
 
             .header__list--appearance {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0; left: 0;
+                width: 100vw;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+
+                .header__close {
+                    display: block;
+                    position: absolute;
+                    top: 4em; right: 4em;
+                    width: 5em;
+                }
             }
         }
     }

@@ -103,19 +103,19 @@
     }
 }
 
-@media screen and (max-width: 1439px) {
+@media only screen and (max-width: 1439px) {
     #expeditions {
         font-size: 7.5px;
     }
 }
 
-@media screen and (max-width: 1099px) {
+@media only screen and (max-width: 1099px) {
     #expeditions {
         font-size: 5.625px;
     }
 }
 
-@media screen and (max-width: 804px) {
+@media only screen and (max-width: 804px) {
     #expeditions {
         width: 80%;
         font-size: 8px;
@@ -154,7 +154,7 @@
     }
 }
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
     #expeditions {
         font-size: 4px;
     }
