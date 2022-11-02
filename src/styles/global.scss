@@ -35,6 +35,12 @@ html {
     font-size: 62.5%;
 }
 
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+}
+
 @mixin text-setting( $font-size, $line-heigth, $color, $font-weight ) {
     font-size: $font-size;
     line-height: $line-heigth;
@@ -54,9 +60,8 @@ html {
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px)  {
     html {
         font-size: 21.10%;
-        -webkit-min-device-pixel-ratio: 2;
     }
 }
